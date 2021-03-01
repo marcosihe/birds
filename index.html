@@ -8,7 +8,7 @@
     <meta name="author" content="Marcos E. Herrera">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Agapornis - Loro Fisher</title>
+    <title>Agapornis - Loro Fischer</title>
 </head>
 <body>
     <header>
@@ -23,75 +23,122 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
-                  <li class="nav-item">
+                  <!--<li class="nav-item">
                     <a class="nav-link" href="#">Info</a>
-                  </li>
+                  </li>-->
+                  
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#contacto">Contacto</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
     </header>
-    <main class="container">
+    <main class="pt-5">
         <!--Imágenes-->
-        <section>
+        <section class="container" class="py-5">
             <!--Fotos-->
-            <article></article>
+            <article class="mt-5">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/001-Agapornis-Fisher.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/002-loro-fisher.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/004-agapornis.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </article>
             <!--Info de precios-->
-            <article></article>
+            <article class="my-5">
+                <div class="card">
+                    <h5 class="card-header">Quiero mi Agapornis</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Precios</h5>
+                      <p class="card-text">
+                            Opción 1: $2100 -> Pico común<br>
+                            Opción 2: $2600 -> Pico colorado<br>
+                            Opción 3: $2600 -> Pico azul<br>
+                            Opción 4: $4500 -> La pareja (cualquiera)
+                      </p>
+                      <div class="text-center">
+                          <a href="https://wa.me/3816703322" target="_blank" class="btn btn-success text-center">Whatsapp</a>
+                      </div>
+                      
+                    </div>
+                  </div>
+            </article>
         </section>
         <!--Info sobre las aves y sus cuidados-->
-        <section></section>
-        <!--Contacto-->
-        <section class="card my-5 border-dark">
-          <div class="card-header bg-dark text-light">
-              <h5>Formulario de compra</h5>
-          </div>
-          <div class="card-body">
-              <form id='suscriptionForm' onsubmit="generalValidation(event)">
-                  <div class="mb-3"> <!--Nombre y Apellido-->
-                      <label class="form-label">Nombre y Apellido <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="name" placeholder="Juan Perez" onfocus="clearAlertStyles(this)" onblur="requiredField(this)" required>
-                      <div class="valid-feedback">
-                          <p>Ingreso correcto de datos</p>
-                      </div>
-                      <div class="invalid-feedback">
-                          <p>Debe ingregresar nombre y apellido</p>
-                      </div>
-                  </div>
-                  <div class="mb-3"> <!--E-mail-->
-                      <label class="form-label">E-mail <span class="text-danger">*</span></label>
-                      <input type="email" class="form-control" id="email" placeholder="juanperezok@gmail.com" onfocus="clearAlertStyles(this)" onblur="validateEmail(this)" required>
-                      <div class="invalid-feedback">
-                          <p>Debe ingresar un e-mail válido</p>
-                      </div>
-                  </div>
-                  <div class="mb-3"><!--Teléfono-->
-                      <label class="form-label">Teléfono <span class="text-danger">*</span></label>
-                      <input type="number" class="form-control" id="phone" placeholder="3816703322" onfocus="clearAlertStyles(this)" onblur="validateNumber(this)" required>
-                      <div class="invalid-feedback">
-                          <p>Debe ingresar un número de teléfono</p>
-                      </div>
-                  </div>
-                  <div class="mb-3"><!--Consulta-->
-                      <label class="form-label">¿Cómo podemos ayudarte? <span class="text-danger">*</span></label>
-                      <textarea type="text" class="form-control" id="consult" placeholder="Hola, estoy interesado/a en la opción 1..." onfocus="clearAlertStyles(this)" onblur="validateConsult(this)" required></textarea>
-                      <div class="invalid-feedback">
-                          <p>Debe ingresar una consulta de al menos 10 caracteres</p>
-                      </div>
-                  </div>
-                  <button class="btn btn-primary" type="submit">Enviar</button>
-                  <div class="mt-1">Todos los campos con <span class="text-danger">*</span> son obligatorios.</div>
-              </form>
-              <div id="alert" role="alert"></div>
-          </div>
-      </section>
+        </section>
+        <section class="container">
+            <!--Contacto-->
+        <section id="contacto" class="card my-5 border-dark">
+                <div class="card-header bg-dark text-light">
+                    <h5>Formulario de compra</h5>
+                </div>
+                <div class="card-body">
+                    <form id='suscriptionForm' onsubmit="generalValidation(event)">
+                        <div class="mb-3"> <!--Nombre y Apellido-->
+                            <label class="form-label">Nombre y Apellido <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name" placeholder="Juan Perez" onfocus="clearAlertStyles(this)" onblur="requiredField(this)" required>
+                            <div class="valid-feedback">
+                                <p>Ingreso correcto de datos</p>
+                            </div>
+                            <div class="invalid-feedback">
+                                <p>Debe ingregresar nombre y apellido</p>
+                            </div>
+                        </div>
+                        <div class="mb-3"> <!--E-mail-->
+                            <label class="form-label">E-mail <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="juanperezok@gmail.com" onfocus="clearAlertStyles(this)" onblur="validateEmail(this)" required>
+                            <div class="invalid-feedback">
+                                <p>Debe ingresar un e-mail válido</p>
+                            </div>
+                        </div>
+                        <div class="mb-3"><!--Teléfono-->
+                            <label class="form-label">Teléfono <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="phone" placeholder="3816703322" onfocus="clearAlertStyles(this)" onblur="validateNumber(this)" required>
+                            <div class="invalid-feedback">
+                                <p>Debe ingresar un número de teléfono</p>
+                            </div>
+                        </div>
+                        <div class="mb-3"><!--Consulta-->
+                            <label class="form-label">¿Cómo podemos ayudarte? <span class="text-danger">*</span></label>
+                            <textarea type="text" class="form-control" id="consult" placeholder="Hola, estoy interesado/a en la opción 1..." onfocus="clearAlertStyles(this)" onblur="validateConsult(this)" required></textarea>
+                            <div class="invalid-feedback">
+                                <p>Debe ingresar una consulta de al menos 10 caracteres</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                        <div class="mt-1">Todos los campos con <span class="text-danger">*</span> son obligatorios.</div>
+                    </form>
+                    <div id="alert" role="alert"></div>
+                </div>
+        </section>
+        
     </main>
     <aside></aside>
     <footer class="bg-dark text-light py-4 text-center">
