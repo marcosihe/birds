@@ -38,7 +38,61 @@
             </div>
           </nav>
     </header>
-    <main></main>
+    <main class="container">
+        <!--Imágenes-->
+        <section>
+            <!--Fotos-->
+            <article></article>
+            <!--Info de precios-->
+            <article></article>
+        </section>
+        <!--Info sobre las aves y sus cuidados-->
+        <section></section>
+        <!--Contacto-->
+        <section class="card my-5 border-dark">
+          <div class="card-header bg-dark text-light">
+              <h5>Formulario de compra</h5>
+          </div>
+          <div class="card-body">
+              <form id='suscriptionForm' onsubmit="generalValidation(event)">
+                  <div class="mb-3"> <!--Nombre y Apellido-->
+                      <label class="form-label">Nombre y Apellido <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="name" placeholder="Juan Perez" onfocus="clearAlertStyles(this)" onblur="requiredField(this)" required>
+                      <div class="valid-feedback">
+                          <p>Ingreso correcto de datos</p>
+                      </div>
+                      <div class="invalid-feedback">
+                          <p>Debe ingregresar nombre y apellido</p>
+                      </div>
+                  </div>
+                  <div class="mb-3"> <!--E-mail-->
+                      <label class="form-label">E-mail <span class="text-danger">*</span></label>
+                      <input type="email" class="form-control" id="email" placeholder="juanperezok@gmail.com" onfocus="clearAlertStyles(this)" onblur="validateEmail(this)" required>
+                      <div class="invalid-feedback">
+                          <p>Debe ingresar un e-mail válido</p>
+                      </div>
+                  </div>
+                  <div class="mb-3"><!--Teléfono-->
+                      <label class="form-label">Teléfono <span class="text-danger">*</span></label>
+                      <input type="number" class="form-control" id="phone" placeholder="3816703322" onfocus="clearAlertStyles(this)" onblur="validateNumber(this)" required>
+                      <div class="invalid-feedback">
+                          <p>Debe ingresar un número de teléfono</p>
+                      </div>
+                  </div>
+                  <div class="mb-3"><!--Consulta-->
+                      <label class="form-label">¿Cómo podemos ayudarte? <span class="text-danger">*</span></label>
+                      <textarea type="text" class="form-control" id="consult" placeholder="Hola, estoy interesado/a en la opción 1..." onfocus="clearAlertStyles(this)" onblur="validateConsult(this)" required></textarea>
+                      <div class="invalid-feedback">
+                          <p>Debe ingresar una consulta de al menos 10 caracteres</p>
+                      </div>
+                  </div>
+                  <button class="btn btn-primary" type="submit">Enviar</button>
+                  <div class="mt-1">Todos los campos con <span class="text-danger">*</span> son obligatorios.</div>
+              </form>
+              <div id="alert" role="alert"></div>
+          </div>
+      </section>
+    </main>
     <aside></aside>
     <footer class="bg-dark text-light py-4 text-center">
         <div>
