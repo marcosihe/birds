@@ -9,6 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/parrot5.svg">
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_nC9AZY0jzcM3ENY164iuV");
+        })();
+    </script>
     <title>Agapornis - Loro Fischer</title>
 </head>
 <body>
@@ -313,7 +319,6 @@
                             <label class="form-label">Nombre y Apellido <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="name" placeholder="Juan Perez" onfocus="clearAlertStyles(this)" onblur="requiredField(this)" required>
                             <div class="valid-feedback">
-                                <p>Ingreso correcto de datos</p>
                             </div>
                             <div class="invalid-feedback">
                                 <p>Debe ingregresar nombre y apellido</p>
